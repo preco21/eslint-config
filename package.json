@@ -50,7 +50,7 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.9.0",
     "eslint-find-rules": "^3.3.1",
-    "husky": "^1.2.0",
+    "husky": "^2.6.0",
     "is-plain-obj": "^1.1.0",
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
