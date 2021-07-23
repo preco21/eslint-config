@@ -49,7 +49,9 @@ module.exports = {
     'no-loss-of-precision': 'warn',
     'no-misleading-character-class': 'error',
     'no-obj-calls': 'error',
-    'no-promise-executor-return': 'error',
+    // may encounter edge cases when using `setTimeout()` like this:
+    // await new Promise((resolve) => setTimeout(resolve, 300));
+    'no-promise-executor-return': 'off',
     'no-prototype-builtins': 'error',
     'no-regex-spaces': 'error',
     'no-setter-return': 'error',
