@@ -192,8 +192,8 @@ module.exports = {
     // FIXME:
     // disabled due to the issue where it causes false-positive when recursive
     // type references in generics involved.
-    // 'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', {
       functions: false,
