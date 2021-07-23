@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "check-eslint-rules": "npm-run-all --parallel check-eslint-rules:*",
+    "check-eslint-rules:index": "eslint-find-rules --unused --deprecated index.js",
     "check-eslint-rules:typescript": "eslint-find-rules --unused --deprecated --no-core rules/typescript.js"
   },
   "engines": {
