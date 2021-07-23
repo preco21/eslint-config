@@ -12,9 +12,9 @@ npm install --save-dev @preco21/eslint-config
 
 ### Peer dependencies
 
-If you are only interested in the default config (`base`), you are good to go and you don’t need to follow installation instructions below.
+If you are only interested in the core rules (e.g. `rules/base`), you are good to go and you don’t need to follow installation instructions below.
 
-There are configs that work with various plugins like `typescript`, `import`, `react`, and so on.
+There are configs that work with various plugins like `typescript`, `import`, `react`, and so on. (`import`, `react` rules are not yet supported)
 
 To use those, you will need to install all its peer dependencies.
 
@@ -60,18 +60,11 @@ You can find more details about ESLint configuration [here](http://eslint.org/do
 
 ## Available configs
 
-The package exposes a number of configs along with the `base` one.
+The package exposes two types of the config: `top-level` and `individual`.
 
-There are two types of the config:
+### Top-level configs
 
-- `concrete`: A config that just works without any extra configuration.
-- `composable`: A config that can be composed to make customized configuration.
-
-### Concrete configs
-
-[WIP]
-
-You can find concrete configs in the top-level of the package:
+Top-level configs work in a zero-configuration manner, which you don't need extra configuration to use the config:
 
 ```json
 {
@@ -79,15 +72,11 @@ You can find concrete configs in the top-level of the package:
 }
 ```
 
-- `@preco21/eslint-config`: The basic config for common JavaScript projects. This config is assuming you are in `node` environment (e.g. `nodejs`, `webpack`, ...).
-- `@preco21/eslint-config/react`: The config for React projects with support for React and JSX.
-- `@preco21/eslint-config/react-native`: The config for ReactNative projects with support for React and JSX.
+Every top-level config has [ECMAScript modules](http://2ality.com/2014/09/es6-modules-final.html) support and latest ECMAScript features enabled by default.
 
-Every concrete config has [ECMAScript modules](http://2ality.com/2014/09/es6-modules-final.html) support and latest ECMAScript features enabled by default.
+### Individual configs
 
-### Composable configs
-
-If the concrete rules don't support your use-cases, you may use composable configs from the `rules` folder to assemble your own config:
+If the top-level configs don't fit in your use-cases, you may assemble your own config by mixing individual configs exposed from the `rules` folder:
 
 ```json
 {
@@ -160,7 +149,7 @@ See [here](https://eslint.org/docs/user-guide/configuring/language-options#speci
 
 ### Using `script` source type
 
-Every concrete configs treats your code as ECMAScript modules enabled environment by default. Add this to your configuration if you want to disable it:
+Every top-level config treats your code are in ECMAScript modules enabled environment by default. Add this to your configuration if you want to disable it:
 
 ```json
 {
