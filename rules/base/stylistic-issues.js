@@ -82,7 +82,7 @@ module.exports = {
       tabWidth: 2,
       ignoreComments: true,
       ignoreUrls: true,
-      ignoreStrings: false,
+      ignoreStrings: true,
       ignoreTemplateLiterals: true,
       ignoreRegExpLiterals: true,
     }],
