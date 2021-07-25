@@ -1,6 +1,6 @@
 {
   "name": "@preco21/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint shareable config for @preco21",
   "author": "Plusb Preco <plusb21@gmail.com>",
   "main": "index.js",
