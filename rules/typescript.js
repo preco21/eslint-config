@@ -114,7 +114,6 @@ module.exports = {
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/typedef': ['error', {
       parameter: true,
-      memberVariableDeclaration: true,
     }],
     '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/unified-signatures': 'error',
