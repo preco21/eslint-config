@@ -85,7 +85,8 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+    // disabled as the rule requires type information
+    '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     '@typescript-eslint/prefer-as-const': 'error',
     '@typescript-eslint/prefer-enum-initializers': 'off',
     '@typescript-eslint/prefer-for-of': 'off',
@@ -171,8 +172,9 @@ module.exports = {
     }],
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': 'error',
-    'no-implied-eval': 'off',
-    '@typescript-eslint/no-implied-eval': 'error',
+    // disabled as the rule requires type information
+    // 'no-implied-eval': 'off',
+    '@typescript-eslint/no-implied-eval': 'off',
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'error',
     'no-loop-func': 'off',
@@ -188,8 +190,9 @@ module.exports = {
     // the same as a variable.
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
-    'no-throw-literal': 'off',
-    '@typescript-eslint/no-throw-literal': 'error',
+    // disabled as the rule requires type information
+    // 'no-throw-literal': 'off',
+    '@typescript-eslint/no-throw-literal': 'off',
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': ['error', {
       allowTaggedTemplates: true,
@@ -215,8 +218,9 @@ module.exports = {
     }],
     'require-await': 'off',
     '@typescript-eslint/require-await': 'off',
-    'return-await': 'off',
-    '@typescript-eslint/return-await': 'warn',
+    // disabled as the rule requires type information
+    // 'return-await': 'off',
+    '@typescript-eslint/return-await': 'off',
     'semi': 'off',
     '@typescript-eslint/semi': 'error',
     'space-before-function-paren': 'off',
