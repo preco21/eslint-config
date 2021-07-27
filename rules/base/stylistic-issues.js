@@ -96,7 +96,11 @@ module.exports = {
     'multiline-ternary': ['error', 'always-multiline'],
     // not really necessary to check user-end code for constructor invocation
     'new-cap': 'off',
-    'new-parens': 'error',
+    // FIXME:
+    // disabled due to the issue where it causes some conflict with
+    // the fixer of `@typescript-eslint/comma-dangle` rule
+    // { a: new Date } -> { a: new Date,() }
+    'new-parens': 'off',
     'newline-per-chained-call': 'off',
     'no-array-constructor': 'error',
     'no-bitwise': 'off',
