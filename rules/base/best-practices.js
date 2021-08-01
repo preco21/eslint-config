@@ -10,7 +10,7 @@ module.exports = {
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'class-methods-use-this': 'off',
-    'complexity': ['warn', { max: 11 }],
+    'complexity': 'off',
     // FIXME:
     // disabled due to the issue where false-positive could occur if used in
     // conjunction with TypeScript.
