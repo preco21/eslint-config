@@ -106,7 +106,7 @@ module.exports = {
     'no-bitwise': 'off',
     'no-continue': 'off',
     'no-inline-comments': 'off',
-    'no-lonely-if': 'error',
+    'no-lonely-if': 'off',
     'no-mixed-operators': 'off',
     // since we enforce separate variable declarations via `one-var` rule
     // and `key-spacing rule for aligning properties with arbitrary spaces, it's
