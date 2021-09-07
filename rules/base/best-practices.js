@@ -84,7 +84,7 @@ module.exports = {
     'no-useless-catch': 'error',
     'no-useless-concat': 'error',
     'no-useless-escape': 'error',
-    'no-useless-return': 'warn',
+    'no-useless-return': 'off',
     'no-void': 'error',
     'no-warning-comments': 'off',
     'no-with': 'error',
