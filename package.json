@@ -34,19 +34,19 @@
     "¯\\_(ツ)_/¯"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
-    "@typescript-eslint/parser": "^4.28.5",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
     "confusing-browser-globals": "^1.0.10",
-    "eslint": "^7.31.0",
-    "eslint-find-rules": "^3.6.1",
+    "eslint": "^8.3.0",
+    "eslint-find-rules": "^4.0.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "^4.3.5"
+    "typescript": "^4.5.2"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
-    "@typescript-eslint/parser": "^4.28.5",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
     "confusing-browser-globals": "^1.0.10",
-    "eslint": "^7.31.0"
+    "eslint": "^8.3.0"
   },
   "peerDependenciesMeta": {
     "@typescript-eslint/eslint-plugin": {
@@ -71,9 +71,6 @@
     "parserOptions": {
       "ecmaVersion": 2019,
       "sourceType": "script"
-    },
-    "rules": {
-      "quote-props": "off"
     }
   }
 }

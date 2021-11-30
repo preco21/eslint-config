@@ -63,6 +63,7 @@ module.exports = {
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
     'no-unsafe-optional-chaining': 'error',
+    'no-unused-private-class-members': 'error',
     'no-useless-backreference': 'error',
     // FIXME: enable once this issue is resolved
     // https://github.com/eslint/eslint/issues/11899

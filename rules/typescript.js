@@ -22,6 +22,7 @@ module.exports = {
     '@typescript-eslint/consistent-indexed-object-style': 'off',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': 'error',
+    '@typescript-eslint/consistent-type-exports': 'off',
     // certain libraries make use of type information in their use cases:
     // https://github.com/typescript-eslint/typescript-eslint/issues/2559#issuecomment-692780580
     '@typescript-eslint/consistent-type-imports': 'off',
@@ -53,15 +54,15 @@ module.exports = {
     '@typescript-eslint/no-extraneous-class': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-for-in-array': 'off',
-    // TODO: enable?
-    '@typescript-eslint/no-implicit-any-catch': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/no-invalid-void-type': 'error',
+    '@typescript-eslint/no-meaningless-void-operator': 'off',
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-namespace': ['error', {
       allowDeclarations: true,
     }],
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-parameter-properties': 'off',
@@ -100,6 +101,7 @@ module.exports = {
     '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
+    '@typescript-eslint/prefer-return-this-type': 'off',
     '@typescript-eslint/prefer-string-starts-ends-with': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
     '@typescript-eslint/promise-function-async': 'off',
@@ -185,6 +187,8 @@ module.exports = {
     '@typescript-eslint/no-magic-numbers': 'off',
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
+    'no-restricted-imports': 'off',
+    '@typescript-eslint/no-restricted-imports': 'off',
     // even if the default `ignoreTypeValueShadow` option is enabled,
     // `@typescript-eslint/no-redeclare` rule above will prevent naming a type
     // the same as a variable.
@@ -211,6 +215,8 @@ module.exports = {
     '@typescript-eslint/no-useless-constructor': 'error',
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+    'padding-line-between-statements': 'off',
+    '@typescript-eslint/padding-line-between-statements': 'off',
     'quotes': 'off',
     '@typescript-eslint/quotes': ['error', 'single', {
       avoidEscape: true,
