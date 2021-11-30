@@ -153,7 +153,7 @@ module.exports = {
     'padding-line-between-statements': 'off',
     'prefer-exponentiation-operator': 'off',
     'prefer-object-spread': 'off',
-    'quote-props': ['warn', 'consistent-as-needed'],
+    'quote-props': ['warn', 'as-needed', { unnecessary: false }],
     // allowing double quotes for some edge cases, but always prefer single quotes
     'quotes': ['error', 'single', {
       avoidEscape: true,
