@@ -55,7 +55,8 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-for-in-array': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
-    '@typescript-eslint/no-invalid-void-type': ['error', { allowInGenericTypeArguments: true }],
+    // disabled since it does not allow to make use of `void` in generic params
+    '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/no-meaningless-void-operator': 'off',
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': 'off',
