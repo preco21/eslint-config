@@ -34,18 +34,7 @@ module.exports = {
       destructuring: 'all',
       ignoreReadBeforeAssign: false,
     }],
-    'prefer-destructuring': ['error', {
-      VariableDeclarator: {
-        array: false,
-        object: true,
-      },
-      AssignmentExpression: {
-        array: false,
-        object: false,
-      },
-    }, {
-      enforceForRenamedProperties: false,
-    }],
+    'prefer-destructuring': 'off',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
