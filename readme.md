@@ -32,6 +32,12 @@ If using npm 5+, use this shortcut:
 npx install-peerdeps --dev @preco21/eslint-config
 ```
 
+Or manually:
+
+```shell
+npm install --dev eslint @preco21/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react
+```
+
 For more details about the installation, please refer to [Airbnb's ESLint config documentation](https://github.com/airbnb/javascript/blob/f5c14cae2ff58000cead98290b8ec4b54dda2f14/packages/eslint-config-airbnb-base/README.md#usage).
 
 ## Usage
