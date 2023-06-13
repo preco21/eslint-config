@@ -90,7 +90,7 @@ If the top-level configs don't fit in your use-cases, you may assemble your own 
 
 It's recommended to use other configs upon the `base` config, since it contains sensible default rules to work with.
 
-Please note that you may need to configure extra options like `env` or `parserOptions` as needed.
+However, you can make changes to configuration for extra options like `env` or `parserOptions` if it's necessary.
 
 For example:
 
@@ -178,7 +178,7 @@ Please note that the `with-es5` config automatically enables `strict` rule.
 
 ### Enforcing strict mode
 
-We don't enable the [`strict` rule](https://eslint.org/docs/rules/strict) by default for reason: Today, we all use tooling like `webpack`, `Babel`, and languages like `TypeScript`. And these tools automatically insert a `'use strict'` directive for each source to ensure your code is in `strict mode`.
+The config doesn't enable the [`strict` rule](https://eslint.org/docs/rules/strict) by default for a good reason as: Today, we all use tooling like `webpack`, `Babel`, and languages like `TypeScript`. And these tools automatically insert a `'use strict'` directive for each source to ensure your code is in `strict mode`.
 
 Also, ECMAScript modules enabled environments are `strict mode` by default.
 
