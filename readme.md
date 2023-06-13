@@ -47,7 +47,7 @@ Add some ESLint config to your `package.json`:
 }
 ```
 
-Or to `.eslintrc`:
+Or with `.eslintrc`:
 
 ```json
 {
