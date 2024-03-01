@@ -17,6 +17,7 @@ module.exports = {
     'no-undef-init': 'error',
     'no-undefined': 'off',
     'no-unused-vars': ['error', {
+      destructuredArrayIgnorePattern: '^_',
       ignoreRestSiblings: true,
     }],
     'no-use-before-define': ['error', {
