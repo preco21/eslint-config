@@ -16,11 +16,6 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@8.12.1",
-  "license": "MIT",
-  "homepage": "https://github.com/preco21/eslint-config#readme",
-  "repository": "preco21/eslint-config",
-  "bugs": "https://github.com/preco21/eslint-config/issues",
   "files": [
     "rules/",
     "index.js",
@@ -37,6 +32,11 @@
     "preco21",
     "¯\\_(ツ)_/¯"
   ],
+  "packageManager": "pnpm@8.12.1",
+  "license": "MIT",
+  "homepage": "https://github.com/preco21/eslint-config#readme",
+  "repository": "preco21/eslint-config",
+  "bugs": "https://github.com/preco21/eslint-config/issues",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
