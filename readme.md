@@ -107,7 +107,7 @@ For example:
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 2019,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "extends": [

@@ -7,11 +7,11 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
-    // typescript rules
+    // Core rules
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/await-thenable': 'off',
@@ -23,7 +23,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': 'error',
     '@typescript-eslint/consistent-type-exports': 'off',
-    // certain libraries make use of type information in their use cases:
+    // Certain libraries make use of type information in their use cases:
     // https://github.com/typescript-eslint/typescript-eslint/issues/2559#issuecomment-692780580
     '@typescript-eslint/consistent-type-imports': 'off',
     '@typescript-eslint/explicit-function-return-type': ['error', {
@@ -46,16 +46,14 @@ module.exports = {
     '@typescript-eslint/no-confusing-non-null-assertion': 'off',
     '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/no-dynamic-delete': 'off',
-    '@typescript-eslint/no-empty-interface': ['error', {
-      allowSingleExtends: true,
-    }],
+    '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-extra-non-null-assertion': 'error',
     '@typescript-eslint/no-extraneous-class': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-for-in-array': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
-    // disabled since it does not allow to make use of `void` in generic params
+    // Disabled since it does not allow to make use of `void` in generic params
     '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/no-meaningless-void-operator': 'off',
     '@typescript-eslint/no-misused-new': 'error',
@@ -70,16 +68,16 @@ module.exports = {
     '@typescript-eslint/no-require-imports': 'off',
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-type-alias': 'off',
-    // this requires the `strictNullChecks` option so may be problematic
+    // This requires the `strictNullChecks` option so may be problematic
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
     // TODO: enable?
     '@typescript-eslint/no-unnecessary-condition': 'off',
-    // we enforce not to use `namespaces` by the `@typescript-eslint/no-namespace` rule
+    // We enforce not to use `namespaces` by the `@typescript-eslint/no-namespace` rule
     '@typescript-eslint/no-unnecessary-qualifier': 'off',
     '@typescript-eslint/no-unnecessary-type-arguments': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'off',
     '@typescript-eslint/no-unnecessary-type-constraint': 'off',
-    // the `strict` option will cover those cases, so
+    // The `strict` option will cover those cases, so
     // `@typescript-eslint/no-unsafe-*` rules are not necessary.
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -87,7 +85,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    // disabled as the rule requires type information
+    // Disabled as the rule requires type information
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     '@typescript-eslint/prefer-as-const': 'error',
     '@typescript-eslint/prefer-enum-initializers': 'off',
@@ -111,18 +109,18 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/sort-type-union-intersection-members': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    // this will not work as expected since the `default-case` rule will always
+    // This will not work as expected since the `default-case` rule will always
     // require you to add `default` case anyway.
     '@typescript-eslint/switch-exhaustiveness-check': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
     '@typescript-eslint/type-annotation-spacing': 'error',
-    '@typescript-eslint/typedef': ['error', {
-      parameter: true,
-    }],
+    // TypeScript will better do the job of inferring types than this rule.
+    // Disabling the rule as the official document suggests: https://typescript-eslint.io/rules/typedef
+    '@typescript-eslint/typedef': 'off',
     '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/unified-signatures': 'error',
 
-    // extension rules
+    // Override rules
     'brace-style': 'off',
     '@typescript-eslint/brace-style': ['error', '1tbs', {
       allowSingleLine: true,
@@ -137,8 +135,8 @@ module.exports = {
     '@typescript-eslint/dot-notation': 'off',
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': 'error',
-    // for ongoing issues: https://github.com/typescript-eslint/typescript-eslint/issues/1824
-    // related links:
+    // For unresolved issues: https://github.com/typescript-eslint/typescript-eslint/issues/1824
+    // Related links:
     // - https://stackoverflow.com/questions/59851672/eslint-indent-and-ignorenodes-trouble-getting-ast-selectors-to-work-correctl/59852368#59852368
     // - https://astexplorer.net/
     'indent': 'off',
@@ -175,7 +173,7 @@ module.exports = {
     }],
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': 'error',
-    // disabled as the rule requires type information
+    // Disabled as the rule requires type information
     // 'no-implied-eval': 'off',
     '@typescript-eslint/no-implied-eval': 'off',
     'no-invalid-this': 'off',
@@ -190,12 +188,12 @@ module.exports = {
     '@typescript-eslint/no-redeclare': 'error',
     'no-restricted-imports': 'off',
     '@typescript-eslint/no-restricted-imports': 'off',
-    // even if the default `ignoreTypeValueShadow` option is enabled,
+    // Even if the default `ignoreTypeValueShadow` option is enabled,
     // `@typescript-eslint/no-redeclare` rule above will prevent naming a type
     // the same as a variable.
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
-    // disabled as the rule requires type information
+    // Disabled as the rule requires type information
     // 'no-throw-literal': 'off',
     '@typescript-eslint/no-throw-literal': 'off',
     'no-unused-expressions': 'off',
@@ -206,14 +204,19 @@ module.exports = {
     // disabled due to the issue where it causes false-positive when recursive
     // type references in generics involved.
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': ['error', {
+      destructuredArrayIgnorePattern: '^_',
+      ignoreRestSiblings: true,
+    }],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', {
       functions: false,
       variables: false,
     }],
     'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': 'error',
+    // FIXME: Disabled due to an issue with the rule.
+    // https://github.com/typescript-eslint/typescript-eslint/issues/420
+    '@typescript-eslint/no-useless-constructor': 'off',
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     'padding-line-between-statements': 'off',

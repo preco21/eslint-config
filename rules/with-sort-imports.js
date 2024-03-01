@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * with simple import rules
+ * With simple import rules
  */
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
