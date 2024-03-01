@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@preco21/tsconfig':
+    specifier: ^6.0.0
+    version: 6.0.0
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.5.0
     version: 5.5.0(@typescript-eslint/parser@5.5.0)(eslint@8.57.0)(typescript@4.5.2)
@@ -110,6 +113,11 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+    dev: true
+
+  /@preco21/tsconfig@6.0.0:
+    resolution: {integrity: sha512-rPJGYwYu7VRFwaldDdp7kwaH1CK0CEL+sfLbneRlPjlGlkaPZam3Atvt7iFmP2fjBgUViH0dTLo6I3HIHFBP1g==}
+    engines: {node: '>=18'}
     dev: true
 
   /@types/json-schema@7.0.9:
