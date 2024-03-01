@@ -5,6 +5,7 @@
   "author": "Plusb Preco <plusb21@gmail.com>",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "test": "npm-run-all --parallel lint check-eslint-rules",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
