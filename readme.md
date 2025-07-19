@@ -2,12 +2,21 @@
 
 > ESLint shareable config for `@preco21`
 
+[WIP]: Still working on it.
+
 This package provides @preco21's ESLint rules as an extensible shared config.
 
 ## Install
 
 ```shell
-npm install --save-dev @preco21/eslint-config
+pnpm i -D eslint @preco21/eslint-config
+```
+
+```js
+// eslint.config.mjs
+import preco21 from '@preco21/eslint-config';
+
+export default preco21();
 ```
 
 ### Peer dependencies
@@ -226,3 +235,7 @@ If you are in [Electron](https://electronjs.org/) environment, you may need to a
 ```
 
 For more details, see [here](https://github.com/benmosher/eslint-plugin-import#importcore-modules).
+
+## Motivation
+
+Heavily inspired by [`antfu/eslint-config`](https://github.com/antfu/eslint-config).
