@@ -2,25 +2,23 @@
   "name": "@preco21/eslint-config",
   "version": "2.2.2",
   "description": "ESLint shareable config for @preco21",
-  "author": "Plusb Preco <plusb21@gmail.com>",
+  "author": "Preco Plusb <plusb21@gmail.com>",
   "type": "module",
-  "main": "index.js",
-  "module": "./dist/index.mjs",
+  "main": "index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
     }
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "test": "pnpm run '/^(typecheck|lint|check-eslint-rules)$/'",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "typecheck": "tsc --noEmit",
-    "build": "tsup --format esm,cjs --clean --dts",
+    "build": "tsdown",
+    "build:watch": "tsdown --watch",
     "dev": "tsup --format esm,cjs --watch & eslint-flat-config-viewer",
     "watch": "tsup --format esm,cjs --watch",
     "clean": "rm -rf dist/",
@@ -29,11 +27,10 @@
     "check-eslint-rules:typescript": "eslint-find-rules --unused --deprecated --no-core rules/typescript.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "files": [
-    "dist/",
-    "!*.tsbuildinfo"
+    "dist/"
   ],
   "keywords": [
     "code",
@@ -50,26 +47,31 @@
   "repository": "preco21/eslint-config",
   "bugs": "https://github.com/preco21/eslint-config/issues",
   "dependencies": {
-    "@stylistic/eslint-plugin": "^1.6.3",
-    "@typescript-eslint/eslint-plugin": "^5.5.0",
-    "@typescript-eslint/parser": "^5.5.0",
-    "confusing-browser-globals": "^1.0.10"
+    "@stylistic/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "confusing-browser-globals": "^1.0.10",
+    "globals": "^16.3.0"
   },
   "devDependencies": {
-    "@preco21/tsconfig": "^6.0.0",
-    "eslint": "^8.42.0",
-    "eslint-find-rules": "^4.0.0",
-    "eslint-flat-config-viewer": "^0.1.11",
-    "eslint-plugin-react": "^7.27.1",
-    "tsup": "^8.0.2",
-    "typescript": "^4.5.2"
+    "@eslint-react/eslint-plugin": "^1.52.3",
+    "@eslint/config-inspector": "^1.1.0",
+    "@preco21/tsconfig": "7.1.0",
+    "eslint": "^9.31.0",
+    "eslint-find-rules": "^5.0.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "tsdown": "^0.12.9",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": ">=8.40.0",
-    "eslint-plugin-react": "^7.27.1"
+    "@eslint-react/eslint-plugin": "^1.52.3",
+    "eslint": "^9.31.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20"
   },
   "peerDependenciesMeta": {
-    "eslint-plugin-react": {
+    "@eslint-react/eslint-plugin": {
       "optional": true
     }
   }
